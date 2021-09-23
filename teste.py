@@ -9,14 +9,30 @@ import time
 driver = webdriver.Chrome()
 driver.get('https://www.4devs.com.br/gerador-de-curriculo')
 
-driver.find_element_by_xpath("//input[@id='name']").send_keys("Luiz Henrique Alberto de Camargo")
-driver.find_element_by_xpath("//input[@id='email']").send_keys("luiz.henriquecamargo@hotmail.com")
-driver.find_element_by_xpath("//input[@id='nationality']").clear()
-driver.find_element_by_xpath("//input[@id='nationality']").send_keys("Brasileiro")
-driver.find_element_by_xpath("//input[@id='age']").send_keys("21")
+nome = driver.find_element_by_xpath("//input[@id='name']")
+nome.send_keys("Luiz Henrique Alberto de Camargo")
 
-driver.find_element_by_xpath("//select[@id='gender']").send_keys("Masculino")
-driver.find_element_by_xpath("//select[@id='marital']").send_keys("Solteiro(a)")
+email = driver.find_element_by_xpath("//input[@id='email']")
+email.send_keys("luiz.henriquecamargo@hotmail.com")
+
+driver.find_element_by_xpath("//input[@id='nationality']").clear()
+
+nacionalidade = driver.find_element_by_xpath("//input[@id='nationality']")
+nacionalidade.send_keys("Brasileiro")
+
+idade = driver.find_element_by_xpath("//input[@id='age']")
+idade.send_keys("21") 
+
+genero = driver.find_element_by_xpath("//select[@id='gender']")
+genero.send_keys("Masculino") 
+
+estadocivil = driver.find_element_by_xpath("//select[@id='marital']")
+estadocivil.send_keys("Solteiro(a)")
+
+
+time.sleep(15)
+
+
 
 driver.find_element_by_xpath("//input[@id='telephone']").send_keys("(15) 99652-1338")
 driver.find_element_by_xpath("//input[@id='mobile']").send_keys("(15) 2107-8933)")
