@@ -29,18 +29,26 @@ genero.send_keys("Masculino")
 estadocivil = driver.find_element_by_xpath("//select[@id='marital']")
 estadocivil.send_keys("Solteiro(a)")
 
+celular = driver.find_element_by_xpath("//input[@id='telephone']") 
+celular.send_keys("(15) 99652-1338")
 
-time.sleep(15)
+telefone = driver.find_element_by_xpath("//input[@id='mobile']")
+telefone.send_keys("(15) 2107-8933)")
 
+rua = driver.find_element_by_xpath("//input[@id='address']") 
+rua.send_keys("Rua José Elias Habice, nº86")
 
+cidade = driver.find_element_by_xpath("//input[@id='city']")
+cidade.send_keys("Porto Feliz")
 
-driver.find_element_by_xpath("//input[@id='telephone']").send_keys("(15) 99652-1338")
-driver.find_element_by_xpath("//input[@id='mobile']").send_keys("(15) 2107-8933)")
-driver.find_element_by_xpath("//input[@id='address']").send_keys("Rua dos Curiós")
-driver.find_element_by_xpath("//input[@id='city']").send_keys("Porto Feliz")
-driver.find_element_by_xpath("//input[@id='state']").send_keys("São Paulo")
-driver.find_element_by_xpath("//input[@id='cep']").send_keys("18540-000")
-driver.find_element_by_xpath("//textarea[@id='career-goal']").send_keys("Eu sou o cara! Eu sou o cara! Eu sou o cara! Eu sou o cara! Eu sou o cara! Eu sou o cara! Eu sou o cara! Eu sou o cara! ")
+estado = driver.find_element_by_xpath("//input[@id='state']")
+estado.send_keys("São Paulo")
+
+cep = driver.find_element_by_xpath("//input[@id='cep']")
+cep.send_keys("18540-000")
+
+descricao = driver.find_element_by_xpath("//textarea[@id='career-goal']")
+descricao.send_keys("Eu sou o cara! Eu sou o cara! Eu sou o cara! Eu sou o cara! Eu sou o cara! Eu sou o cara! Eu sou o cara! Eu sou o cara! ")
 
 driver.find_element_by_xpath("//input[@id='btnNext']").click()
 
