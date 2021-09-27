@@ -1,4 +1,5 @@
 import PySimpleGUI as sg
+from PySimpleGUI.PySimpleGUI import BLUES, theme_text_color
 
 sg.theme('DarkBlue')
 
