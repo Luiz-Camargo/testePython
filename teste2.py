@@ -1,15 +1,17 @@
 import random
 
-#GERADOR DE SENHAS
+# GERADOR DE SENHAS
 
 minusculo = ("abcdefghjklmnopqrstuvwxyz")
 maiusculo = ("ABCDEFGHJKLMNOPQRSTUVWXYZ")
 numeros = ("0123456789")
 simbolos = ("@#$%&*")
 
+varjuntas = minusculo + maiusculo + numeros + simbolos
 
-soma = minusculo + maiusculo + numeros + simbolos
+tamanho = input("Insira o tamanho da senha:")
 
-tamanho = 5
-senha = random.sample(soma,tamanho)
+nmrsenhas = input("Informe o número de senhas que deve ser gerada:")
+
+senha = random.sample(varjuntas, int(tamanho))
 print("".join(senha))
