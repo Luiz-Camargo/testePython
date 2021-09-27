@@ -13,5 +13,3 @@ soma = minusculo + maiusculo + numeros + simbolos
 tamanho = 5
 senha = random.sample(soma,tamanho)
 print("".join(senha))
-
-
